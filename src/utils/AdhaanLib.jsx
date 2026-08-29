@@ -5,6 +5,7 @@ const date=new Date();
 const params=CalculationMethod.Karachi();
 const prayerTimes= new PrayerTimes(coordinate,date,params);
 const next=prayerTimes.nextPrayer();
+
 export const current_prayer=prayerTimes.currentPrayer();
 export const nextprayer=[{
   name:prayerTimes.nextPrayer(),

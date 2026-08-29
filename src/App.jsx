@@ -11,7 +11,7 @@ console.log(prayer);
 
 function App() {
   return (
-    <div className='bg-app-bg h-screen p-6 flex flex-col justify-between'>
+    <div className='bg-app-bg h-full p-6 flex flex-col justify-between'>
       <div className='flex flex-col gap-4'>
       <AdhaanLib/>
       <HeaderCard nextprayer={nextprayer}/>
@@ -24,7 +24,7 @@ function App() {
       <StrdCard prayertime={prayer[5]} isActive={current_prayer?.toLocaleLowerCase()==='isha'}/>
       <StrdCard prayertime={prayer[6]} isActive={false}/>
       </div>
-      <div className='h-20 w-full'>
+      <div className='h-20 w-full flex justify-end'>
       <BottomBar/>
       </div>
     </div>

@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-app-bg: #0B1120;
+  --color-app-card: #162032;
+  --color-app-card-border: #24324D;
+  --color-app-hero-bg: #FFF9EB;
+  --color-app-hero-text: #0F172A;
+  --color-app-gold: #F59E0B;
+  --color-app-gold-light: #FDE68A;
+  --color-app-active-border: #FBBF24;
+  --color-app-text-muted: #94A3B8;
+  --shadow-glow: 0 0 15px -3px rgba(251, 191, 36, 0.35);
+}

@@ -6,15 +6,14 @@ import BottomBar from './componenets/BottomBar'
 import SunriseCard from './componenets/SunriseCard'
 import {Coordinates,CalculationMethod,PrayerTimes} from 'adhan'
 import AdhaanLib from './utils/AdhaanLib'
-import {prayer,nextprayer,current_prayer} from './utils/AdhaanLib'
-console.log(prayer);
+import {prayer,current_prayer} from './utils/AdhaanLib'
 
 function App() {
   return (
     <div className='bg-app-bg h-full p-6 flex flex-col justify-between'>
       <div className='flex flex-col gap-4'>
       <AdhaanLib/>
-      <HeaderCard nextprayer={nextprayer}/>
+      <HeaderCard/>
       <LocationCard/>
       <StrdCard prayertime={prayer[0]} isActive={current_prayer?.toLocaleLowerCase()==='fajr'}/>
       <SunriseCard prayertime={prayer[1]}/>

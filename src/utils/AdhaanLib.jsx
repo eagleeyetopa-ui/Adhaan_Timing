@@ -4,22 +4,9 @@ const coordinate=new Coordinates(30.3165, 78.0322);
 const date=new Date();
 const params=CalculationMethod.Karachi();
 const prayerTimes= new PrayerTimes(coordinate,date,params);
-const next=prayerTimes.nextPrayer();
-
 export const current_prayer=prayerTimes.currentPrayer();
-export const nextprayer=[{
-  name:prayerTimes.nextPrayer(),
-  time:prayerTimes.timeForPrayer(next),
-   hour: Temporal.Instant.fromEpochMilliseconds(prayerTimes.timeForPrayer(next))
-  .toZonedDateTimeISO('Asia/Kolkata')
-  .toLocaleString('en-IN', { hour: 'numeric'}),
-  mins:Temporal.Instant.fromEpochMilliseconds(prayerTimes.timeForPrayer(next))
-  .toZonedDateTimeISO('Asia/Kolkata')
-  .toLocaleString('en-IN', { minute: 'numeric'}),
-}]
-console.log(nextprayer);
+const next=prayerTimes.nextPrayer();
 const sunahtime=new SunnahTimes(prayerTimes);
-console.log(sunahtime.lastThirdOfTheNight);
 export const prayer=[{
   id:"Fajr",
   time: Temporal.Instant.fromEpochMilliseconds(prayerTimes.fajr.getTime())
